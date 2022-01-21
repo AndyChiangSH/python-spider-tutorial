@@ -69,8 +69,12 @@ root = BeautifulSoup(response.text, "html.parser")  # 解析原始碼
 # print(img["src"])
 # print(img.get("src"))
 
-img = root.find("img")
-image = requests.get(img["src"])
-# print(image.content)
-with open(f"logo.jpg", "wb") as file:
-    file.write(image.content)
+# img = root.find("img")
+# image = requests.get(img["src"])
+# # print(image.content)
+# with open(f"logo.jpg", "wb") as file:
+#     file.write(image.content)
+
+classes = root.find("ul", class_="grade3").find_all("li")
+print(classes)
+print(classes[1])
