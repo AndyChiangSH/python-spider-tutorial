@@ -6,10 +6,10 @@ url = "https://andychiangsh.github.io/python-spider-tutorial/web/"  # 取得大�
 response = requests.get(url)
 root = BeautifulSoup(response.text, "html.parser")  # 解析原始碼
 
-# print(root.prettify())
+print(root.prettify())
 
-# h1 = root.find("h1")
-# print(h1)
+h1 = root.find("h1")
+print(h1)
 
 # h1 = root.find("h1", class_="this")
 # print(h1)
@@ -17,9 +17,9 @@ root = BeautifulSoup(response.text, "html.parser")  # 解析原始碼
 # h1 = root.find("h1", id="this")
 # print(h1)
 
-# h2s = root.find_all("h2")
-# print(h2s)    # 列表
-# print(h2s[0])   # 使用索引值
+h2s = root.find_all("h2")
+print(h2s)    # 列表
+print(h2s[0])   # 使用索引值
 
 # h1_h2s = root.find_all(["h1", "h2"], limit=3)
 # print(h1_h2s)
