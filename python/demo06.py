@@ -11,7 +11,7 @@ with open("ptt.csv", "w", newline="", encoding="utf-8-sig") as csvfile:
     # 寫入欄位名稱
     writer.writerow(["標題", "作者"])
 
-    for i in range(5):
+    for i in range(10):
         print(f"第{i+1}頁：")
         response = requests.get(url) # 取得C_Chat的HTML原始碼
         root = BeautifulSoup(response.text, "html.parser")  # 解析原始碼
