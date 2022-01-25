@@ -72,8 +72,8 @@ root = BeautifulSoup(response.text, "html.parser")  # 解析原始碼
 # link = root.find("a")
 # print(link["href"])
 
-# 下載圖片
-img = root.find("img")  # 定位img
-image = requests.get(img["src"])    # 取得src屬性
-with open(f"logo.jpg", "wb") as file:
-    file.write(image.content)   # 寫入檔案
+# # 下載圖片
+# img = root.find("img")  # 定位img
+# image = requests.get(img["src"])    # 取得src屬性
+# with open(f"logo.jpg", "wb") as file:
+#     file.write(image.content)   # 寫入檔案
